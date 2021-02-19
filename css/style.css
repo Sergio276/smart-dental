@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.barra-superior {
+	position: fixed;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	background: #001e2d;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	position: relative;
+	width: 80px;
+}
+
+.logo img {
+	width: 100%;
+	border-radius: 50%;
+	box-shadow:  8px 8px 16px #000c12,
+	-8px -8px 16px #003048;
+}
+
+.contenido-barra {
+	position: absolute;
+	right: 30px;
+	margin: 0 20px;
+}
+
+button {
+	padding: 8px 10px;
+}
