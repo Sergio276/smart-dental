@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -47,7 +48,7 @@ a {
 	border: none;
 	cursor: pointer;
 	color: #F7F7F7;
-	font-family: Arial;
+	font-family: 'Poppins', sans-serif;
 	font-size: 15px;
 	border-radius: 6px;
 	transition: 0.3s;
@@ -107,4 +108,5 @@ a {
 img {
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
 }
