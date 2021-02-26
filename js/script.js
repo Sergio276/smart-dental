@@ -1,3 +1,26 @@
+$(document).ready(function() {
+
+  const inputs = document.querySelectorAll(".campo");
+
+  function addcl(){
+    let parent = this.parentNode.parentNode;
+    parent.classList.add("focus");
+  }
+
+  function remcl(){
+    let parent = this.parentNode.parentNode;
+    if(this.value == ""){
+      parent.classList.remove("focus");
+    }
+  }
+
+  inputs.forEach(input => {
+    input.addEventListener("focus", addcl);
+    input.addEventListener("blur", remcl);
+  });
+
+});
+
 const slidePage = document.querySelector(".slide-page");
 const nextBtnFirst = document.querySelector(".firstNext");
 const prevBtnSec = document.querySelector(".prev-1");
