@@ -64,7 +64,7 @@ a {
 	left: 0;
 	width: 100%;
 	min-height: 100vh;
-  background: url(../img/waves-index.svg) bottom no-repeat;
+  background: url(../img/waves-index-min.svg) bottom no-repeat;
 }
 
 .seccion .contenido {
