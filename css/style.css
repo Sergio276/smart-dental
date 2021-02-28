@@ -642,6 +642,7 @@ input:focus, input.barra_busqueda:focus{
     vertical-align: middle;
     white-space: nowrap;
     margin-left: 53%;
+    border-radius: 30px;
 }
 
 .container_busqueda input#busqueda{
