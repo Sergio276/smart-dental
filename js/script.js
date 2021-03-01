@@ -32,6 +32,8 @@ function ToggleMenu() {
   navigation.classList.toggle("active");
 }
 
+/*Formulario registro de pacientes*/
+
 const slidePage = document.querySelector(".slide-page");
 const nextBtnFirst = document.querySelector(".firstNext");
 const prevBtnSec = document.querySelector(".prev-1");
