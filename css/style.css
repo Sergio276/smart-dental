@@ -388,7 +388,8 @@ a {
   text-align: center;
   border-radius: 5px;
   padding: 50px 35px 10px 35px;
-  box-shadow: 8px 8px 16px #000c12, -8px -8px 16px #003048;
+  box-shadow:  19px 19px 38px #666666,
+  -19px -19px 38px #ffffff;
 }
 .container header {
   font-size: 35px;
@@ -445,17 +446,13 @@ a {
   transition: 0.2s;
   font-weight: 500;
   font-size: 17px;
-  line-height: 25px;
 }
+
 .progress-bar .step .bullet.active {
   border-color: #f49f1c;
   background: #f49f1c;
 }
-.progress-bar .step .bullet span {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 .progress-bar .step .bullet.active span {
   display: none;
 }
