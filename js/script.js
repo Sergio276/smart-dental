@@ -1,3 +1,7 @@
+$(window).on('load', function () {
+  $('.loader').delay(0).fadeOut('slow');
+});
+
 $(document).ready(function () {
 
   const inputs = document.querySelectorAll(".campo");
