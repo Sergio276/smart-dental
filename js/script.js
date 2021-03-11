@@ -1,7 +1,3 @@
-$(window).on('load', function () {
-  $('.loader').delay(0).fadeOut('slow');
-});
-
 $(document).ready(function () {
 
   const inputs = document.querySelectorAll(".campo");
@@ -23,6 +19,26 @@ $(document).ready(function () {
     input.addEventListener("blur", remcl);
   });
 
+  const num_sliders = $('.slider-corousel').toArray().length,
+    num_items_slider = $('.contenedor-slider .item-carousel').toArray().length,
+    space_size = (num_items_slider / num_sliders),
+    interval = 3600;
+
+  let index = 1;
+
+  $('.contenedor-slider').css('width', space_size + '00%');
+  function slide() {
+    $('.contenedor-slider').css('left', '-' + index + '00%');
+    index++;
+    if (index >= space_size) {
+      index = 0;
+    }
+  }
+  setInterval(slide, interval);
+});
+
+$(window).on('load', function () {
+  $('.loader').fadeOut('slow');
 });
 
 function changeImage(anything) {
