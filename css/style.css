@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+ 
 }
 
 a {
@@ -664,6 +665,14 @@ form .form-row .textarea {
 
 .barra {
   background-color: #132330;
+  
+}
+
+.frase {
+  font-size: 23px;
+  color: #fff;
+  font-family: comic sans-serif;
+
 }
 
 input:focus,
