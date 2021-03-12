@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
- 
 }
 
 a {
@@ -21,7 +20,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 20;
+  z-index: 1050;
   background: #333;
 }
 
@@ -105,18 +104,32 @@ a {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: url(../img/waves-index-min.svg) bottom no-repeat;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/waves-index-min.svg) no-repeat bottom
 }
 
 .seccion .contenido {
-  position: absolute;
+  position: relative;
   width: 100%;
-  min-height: calc(100% - 100px);
-  padding: 0 17px;
-  margin-top: 100px;
+  min-height: 100%;
+  padding: 100px 17px 0 17px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.seccion .contenido-agenda {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding: 90px 17px 0 17px;
 }
 
 .control {
@@ -126,10 +139,9 @@ a {
 
 .slider-corousel {
   position: relative;
-  margin: 50px 30px;
+  margin: 0px 30px;
   width: 50%;
   overflow: hidden;
-  /*	border: 2px solid #000;*/
   background: rgba(234, 234, 234, 0.26);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(12px);
@@ -348,15 +360,14 @@ a {
   .contenedor {
     grid-gap: 5rem;
   }
-  .seccion{
+  .seccion {
     height: auto;
   }
-
   .seccion .contenido {
     display: block;
   }
   .slider-corousel {
-    margin: 20px auto;
+    margin: 35px auto;
     width: 100%;
   }
 }
@@ -657,24 +668,18 @@ form .form-row .textarea {
 /* Estilo de index Admin */
 
 .barra {
-<<<<<<< HEAD
   background-color: #132330;
-  
 }
 
 .frase {
   font-size: 23px;
   color: #fff;
   font-family: comic sans-serif;
-
-=======
-  background-color: #001e2d;
 }
 
 .barra a img {
   border-radius: 50%;
   box-shadow: 8px 8px 16px #000c12, -8px -8px 16px #003048;
->>>>>>> 874be13d8548284a3839507bc6e5beda3d3d8681
 }
 
 input:focus,
