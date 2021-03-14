@@ -418,7 +418,7 @@ a {
 
 ::selection {
   color: #fff;
-  background: #00c2c9;
+  background: #075275;
 }
 
 .header-title {
@@ -661,6 +661,83 @@ form .form-row .textarea {
   left: 20px;
 }
 
+
+.contenedor-pacientes { 
+  margin: auto;
+  margin-top: 10%;
+  max-width: 1200px;
+  width: 1200px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px 35px 30px 35px;
+  box-shadow: 19px 19px 38px #666666, -19px -19px 38px #ffffff;
+
+}
+
+.contenedor-pacientes div h2{
+   font-size:35px;
+   font-family: tahoma;
+   
+  }
+
+.botones  { 
+ margin:auto;
+ position: relative;
+ margin-left:700px;
+
+}
+
+.boton-añadir-pacientes  { 
+  display: inline-block;
+  font-size: 18px;
+  font-family: tahoma;
+  background-color: #132330;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.boton-ver-pacientes  { 
+  display: inline-block;
+  font-size: 18px;
+  font-family: tahoma;
+  background-color:#f5a11d;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  
+}
+
+.boton-añadir-pacientes:hover {
+
+  background-color:#212121;
+  -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+  
+}
+
+.boton-ver-pacientes:hover {
+
+  background-color:#212121;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+.contenedor-pacientes button{
+	margin: 0 0 0 30px;
+}
+
+.contenedor-pacientes button .icon {
+  margin: 0 10px 0 0;
+}
+ 
 /*Fin Estilo Diego*/
 
 /* Inicio Estilo David */
