@@ -106,7 +106,7 @@ a {
   height: 100vh;
 }
 
-.wave {
+.wave-index {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -123,13 +123,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.seccion .contenido-agenda {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  padding: 90px 17px 0 17px;
 }
 
 .control {
@@ -354,6 +347,80 @@ a {
 
 .contenedor-login .boton:hover {
   background-position: right;
+}
+
+.seccion .contenido-agenda {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding: 90px 17px 0 17px;
+}
+
+.contenedor-agenda {
+  width: 100%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  row-gap: 30px;
+}
+
+.contenedor-agenda .ubicacion {
+  text-align: center;
+  font-size: 30px;
+}
+.contenedor-agenda .opciones {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 0 20px;
+}
+
+.opciones button i {
+  margin-right: 5px;
+}
+
+.contenedor-agenda .fecha {
+  padding: 0 30px;
+}
+
+.fecha .fecha-content {
+  padding: 10px;
+  border: #000 1px solid;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.fecha-content div {
+  margin: 0 10px;
+}
+
+.fecha-content div i {
+  font-size: 26px;
+  transition: 0.3s;
+}
+.fecha-content div i:hover {
+  color: rgba(0, 0, 0, 0.699);
+  cursor: pointer;
+}
+
+.contenedor-agenda .agendados {
+}
+
+.contenedor-agenda .agendados table {
+  width: 100%;
+}
+
+.contenedor-agenda .agendados table tr th {
+  padding: 18px 10px;
+}
+
+.contenedor-agenda .agendados table tr td {
+  padding: 12px 10px;
+}
+
+.contenedor-agenda .agendados table tr:not(:first-child) {
+  border-top: #000 1px solid;
 }
 
 @media screen and (max-width: 1050px) {

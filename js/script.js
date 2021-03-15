@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $('.loader').fadeOut('slow');
 
   const inputs = document.querySelectorAll(".campo");
 
@@ -35,10 +36,6 @@ $(document).ready(function () {
     }
   }
   setInterval(slide, interval);
-});
-
-$(window).on('load', function () {
-  $('.loader').fadeOut('slow');
 });
 
 function changeImage(anything) {
