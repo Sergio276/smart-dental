@@ -36,6 +36,28 @@ $(document).ready(function () {
     }
   }
   setInterval(slide, interval);
+
+  function seleccion_agenda() {
+    if ($("#radio1").is(':checked')) {
+      $('#nuevo-paciente').hide();
+      $('#paciente-existente').show();
+    } else {
+      $('#paciente-existente').hide();
+      $('#nuevo-paciente').show();
+    }
+  }
+  seleccion_agenda();
+  $('.radio :radio').on("change", function () {
+    seleccion_agenda();
+  });
+
+  $('#modal-agendar').on("click", function () {
+    $('#modal-agenda, .contenido-modal').addClass('active');
+  });
+  $('#cerrar-modal').on("click", function () {
+    $('#modal-agenda, .contenido-modal').removeClass('active');
+  });
+
 });
 
 function changeImage(anything) {

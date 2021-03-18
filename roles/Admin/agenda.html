@@ -111,7 +111,7 @@
             <span>Agenda</span>
           </div>
           <div class="opciones">
-            <button class="btn btn-info">
+            <button class="btn btn-info" id="modal-agendar">
               <i class="far fa-calendar-alt"></i>Agendar
             </button>
           </div>
@@ -126,7 +126,7 @@
                 <h3>Junio 2009</h3>
               </div>
               <div>
-                <a href=""></a><i class="fas fa-chevron-circle-right"></i>
+                <i class="fas fa-chevron-circle-right"></i>
               </div>
             </div>
           </div>
@@ -161,6 +161,126 @@
                 <td><button class="btn btn-danger">Deuda</button></td>
               </tr>
             </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-agenda">
+      <div class="contenido-modal">
+        <div class="cabecera-agendar">
+          <h5>Agendar</h5>
+          <i class="fas fa-times" id="cerrar-modal"></i>
+        </div>
+        <div class="radio">
+          <div class="form-check checkeo">
+            <label class="form-check-label" for="radio1">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="radio1"
+                checked
+                name="optradio"
+                value="option2"
+              />Paciente existente
+            </label>
+          </div>
+          <div class="form-check checkeo">
+            <label class="form-check-label" for="radio2">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="radio2"
+                name="optradio"
+                value="option2"
+              />Nuevo paciente
+            </label>
+          </div>
+        </div>
+        <div class="formulario-agenda">
+          <div id="paciente-existente">
+            <form action="">
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Nombre"
+                  class="form-control"
+                  id="nombre"
+                  name="nombre"
+                />
+              </div>
+              <div class="form-group">
+                <label for="comentario">Comentario:</label>
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  id="comentario"
+                ></textarea>
+              </div>
+              <div class="d-flex flex-row-reverse bg">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </form>
+          </div>
+          <div id="nuevo-paciente">
+            <form action="">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="Nombre"
+                  name="nombre"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pwd"
+                  placeholder="Apellidos"
+                  name="apellidos"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="Rut"
+                  name="rut"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="Telefono fijo"
+                  name="telefono-fijo"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="Telefono movil"
+                  name="telefono-movil"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="E-mail"
+                  name="email"
+                />
+              </div>
+              <div class="d-flex flex-row-reverse bg">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
