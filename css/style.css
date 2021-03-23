@@ -353,7 +353,7 @@ a {
   position: relative;
   width: 100%;
   min-height: 100%;
-  padding: 90px 17px 0 17px;
+  padding: 90px 30px 0 30px;
 }
 
 .contenedor-agenda {
@@ -362,6 +362,7 @@ a {
   display: grid;
   grid-template-columns: 2fr 8fr;
   row-gap: 30px;
+  column-gap: 30px;
 }
 
 .contenedor-agenda .ubicacion {
@@ -379,20 +380,56 @@ a {
   margin-right: 5px;
 }
 
-.contenedor-agenda .fecha {
-  padding: 0 30px;
-}
-
 .fecha .fecha-content {
   padding: 10px;
-  border: #000 1px solid;
   text-align: center;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.fecha-content div {
+/* .fecha-content div {
   margin: 0 10px;
+} */
+
+.fecha-content .flechas {
+  margin: 0 15px;
+}
+
+.fecha-content .datos-fecha {
+  overflow: hidden;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 9px 9px 18px #d6d6d6, -9px -9px 18px #ffffff;
+  border-radius: 7px;
+}
+
+.datos-fecha #mes {
+  background: #ff6433;
+  padding: 3px 45px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.datos-fecha #nom-dia {
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: 10px;
+  color: rgb(97, 97, 97);
+}
+
+.datos-fecha #num-dia {
+  font-weight: 700;
+  margin-top: -20px;
+  font-size: 70px;
+  color: #333;
+}
+
+.datos-fecha #ano {
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: -20px;
+  color: rgb(97, 97, 97);
 }
 
 .fecha-content div i {
@@ -732,7 +769,7 @@ form .form-row .textarea {
 .textarea textarea:valid ~ label {
   transform: translateY(-23px);
   font-size: 14px;
-  color:#0059a1;
+  color: #0059a1;
 }
 .input-data label {
   position: absolute;
@@ -810,13 +847,13 @@ form .form-row .textarea {
   left: 20px;
 }
 
-.input-fecha  {
-font-size:14px;
-font-family: "Poppins", sans-serif;
-margin-top: 2px;
-margin-left: 2px;
-position: relative;
-padding: auto;
+.input-fecha {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 2px;
+  margin-left: 2px;
+  position: relative;
+  padding: auto;
 }
 
 .contenedor-pacientes {
@@ -896,7 +933,6 @@ padding: auto;
 .contenedor-pacientes button .icon {
   margin: 0 10px 0 0;
 }
-
 
 /*Fin Estilo Diego*/
 

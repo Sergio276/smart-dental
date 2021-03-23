@@ -58,6 +58,22 @@ $(document).ready(function () {
     $('#modal-agenda, .contenido-modal').removeClass('active');
   });
 
+  function fecha_actual() {
+    let nom_dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"],
+      meses = ["Enereo", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+      fecha = new Date(),
+      num_dia = fecha.getDate(),
+      nom_dia = nom_dias[fecha.getDay()],
+      mes = meses[fecha.getMonth()],
+      ano = fecha.getFullYear();
+
+    $('#num-dia').html(num_dia);
+    $('#nom-dia').html(nom_dia);
+    $('#mes').html(mes);
+    $('#ano').html(ano);
+  }
+  fecha_actual();
+  $('[data-toggle="popover"]').popover();
 });
 
 function changeImage(anything) {
