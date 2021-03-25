@@ -61,8 +61,8 @@ $(document).ready(function () {
   let nom_dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sabado"],
     nom_meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
     fecha = new Date();
-    
-    var num_dia = fecha.getDate(),
+
+  var num_dia = fecha.getDate(),
     nom_dia = nom_dias[fecha.getDay()],
     num_dia_semana = fecha.getDay(),
     num_mes = fecha.getMonth(),
@@ -70,14 +70,14 @@ $(document).ready(function () {
     ano = fecha.getFullYear();
 
   $('#num-dia').html(num_dia);
-  $('#nom-dia').html(nom_dia);
+  $('#nom-dia').html(nom_dia); 
   $('#mes').html(nom_mes);
   $('#ano').html(ano);
 
   $('#anterior-d').click(function () {
     num_dia = num_dia - 1;
     num_dia_semana = num_dia_semana - 1;
-    
+
     if (num_dia <= 0) {
       num_mes = num_mes - 1;
       if (num_mes == 0 || num_mes == 2 || num_mes == 4 || num_mes == 6 || num_mes == 7 || num_mes == 9 || num_mes == 11 || num_mes == 12) {
@@ -96,7 +96,7 @@ $(document).ready(function () {
     if (num_mes < 0) {
       ano = ano - 1;
       num_mes = 11;
-    };    
+    };
     nom_mes = nom_meses[num_mes];
 
     if (num_dia_semana < 0) {
@@ -110,8 +110,54 @@ $(document).ready(function () {
     $('#mes').html(nom_mes);
     $('#ano').html(ano);
   });
-  $('#siguiente-d').click(function (e) {
-     
+  $('#siguiente-d').click(function () {
+    num_dia = num_dia + 1;
+
+    if (num_mes == 0 || num_mes == 2 || num_mes == 4 || num_mes == 6 || num_mes == 7 || num_mes == 9 || num_mes == 11 || num_mes == 12) {
+      if (num_dia > 31) {
+        num_dia = 1
+        num_mes = num_mes + 1;
+      }
+    } else {
+      if (num_mes == 3 || num_mes == 5 || num_mes == 8 || num_mes == 10) {
+        if (num_dia > 30) {
+          num_dia = 1
+          num_mes = num_mes + 1;
+        }
+      } else {
+        if ((ano % 4 === 0) && (ano % 100 == !0) || (ano % 400 === 0)) {
+          if (num_dia > 28) {
+            num_dia = 1
+            num_mes = num_mes + 1;
+          }
+        } else {
+          if (num_dia > 29) {
+            num_dia = 1
+            num_mes = num_mes + 1;
+          }
+        }
+      }
+    }
+
+    if (num_mes > 12) {
+      ano = ano + 1;
+      num_mes = 0;
+    };
+
+    nom_mes = nom_meses[num_mes];
+
+    if (num_dia_semana >= 6) {
+      num_dia_semana = 0;
+    } else {
+      num_dia_semana = num_dia_semana + 1;
+    };
+
+    nom_dia = nom_dias[num_dia_semana];
+
+    $('#num-dia').html(num_dia);
+    $('#nom-dia').html(nom_dia);
+    $('#mes').html(nom_mes);
+    $('#ano').html(ano);
   });
 
   $('[data-toggle="popover"]').popover();
