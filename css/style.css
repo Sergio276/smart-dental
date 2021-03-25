@@ -432,12 +432,12 @@ a {
   color: rgb(97, 97, 97);
 }
 
-.fecha-content div i {
+.fecha-content .flechas i {
   font-size: 26px;
   transition: 0.3s;
 }
 
-.fecha-content div i:hover {
+.fecha-content .flechas i:hover {
   color: rgba(0, 0, 0, 0.699);
   cursor: pointer;
 }
@@ -458,7 +458,7 @@ a {
 }
 
 .contenedor-agenda .agendados table tr:not(:first-child) {
-  border-top: #000 1px solid;
+  border-top: rgb(119, 119, 119) 2px solid;
 }
 
 #modal-agenda {

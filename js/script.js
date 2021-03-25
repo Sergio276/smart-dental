@@ -58,21 +58,62 @@ $(document).ready(function () {
     $('#modal-agenda, .contenido-modal').removeClass('active');
   });
 
-  function fecha_actual() {
-    let nom_dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"],
-      meses = ["Enereo", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
-      fecha = new Date(),
-      num_dia = fecha.getDate(),
-      nom_dia = nom_dias[fecha.getDay()],
-      mes = meses[fecha.getMonth()],
-      ano = fecha.getFullYear();
+  let nom_dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sabado"],
+    nom_meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+    fecha = new Date();
+    
+    var num_dia = fecha.getDate(),
+    nom_dia = nom_dias[fecha.getDay()],
+    num_dia_semana = fecha.getDay(),
+    num_mes = fecha.getMonth(),
+    nom_mes = nom_meses[fecha.getMonth()],
+    ano = fecha.getFullYear();
+
+  $('#num-dia').html(num_dia);
+  $('#nom-dia').html(nom_dia);
+  $('#mes').html(nom_mes);
+  $('#ano').html(ano);
+
+  $('#anterior-d').click(function () {
+    num_dia = num_dia - 1;
+    num_dia_semana = num_dia_semana - 1;
+    
+    if (num_dia <= 0) {
+      num_mes = num_mes - 1;
+      if (num_mes == 0 || num_mes == 2 || num_mes == 4 || num_mes == 6 || num_mes == 7 || num_mes == 9 || num_mes == 11 || num_mes == 12) {
+        num_dia = 31;
+      } else if (num_mes == 3 || num_mes == 5 || num_mes == 8 || num_mes == 10) {
+        num_dia = 30;
+      } else {
+        if ((ano % 4 === 0) && (ano % 100 == !0) || (ano % 400 === 0)) {
+          num_dia = 28;
+        } else {
+          num_dia = 29;
+        }
+      }
+    };
+
+    if (num_mes < 0) {
+      ano = ano - 1;
+      num_mes = 11;
+    };    
+    nom_mes = nom_meses[num_mes];
+
+    if (num_dia_semana < 0) {
+      num_dia_semana = 6;
+    };
+
+    nom_dia = nom_dias[num_dia_semana];
 
     $('#num-dia').html(num_dia);
     $('#nom-dia').html(nom_dia);
-    $('#mes').html(mes);
+    $('#mes').html(nom_mes);
     $('#ano').html(ano);
-  }
-  fecha_actual();
+  });
+  $('#siguiente-d').click(function (e) {
+     
+  });
+
   $('[data-toggle="popover"]').popover();
 });
 
