@@ -443,8 +443,8 @@ a {
   cursor: pointer;
 }
 
-.contenedor-agenda .agendados {
-}
+/* .contenedor-agenda .agendados {
+} */
 
 .contenedor-agenda .agendados table {
   width: 100%;
@@ -459,7 +459,7 @@ a {
 }
 
 .contenedor-agenda .agendados table tr:not(:first-child) {
-  border-top: rgb(119, 119, 119) 2px solid;
+  border-top: rgb(119, 119, 119) 1px solid;
 }
 
 #modal-agenda {
