@@ -29,13 +29,19 @@ $(document).ready(function () {
 
   $('.contenedor-slider').css('width', space_size + '00%');
   function slide() {
-    $('.contenedor-slider').css('left', '-' + index + '00%');
+    $('.item-carousel').css('transform', 'translateX(-' + index + '00%)');
     index++;
     if (index >= space_size) {
       index = 0;
     }
   }
   setInterval(slide, interval);
+
+  $(document).click(function (e) {
+    if (e.target.id == "modal-agenda") {
+      $('#modal-agenda, .contenido-modal').removeClass('active');
+    }
+  });
 
   function seleccion_agenda() {
     if ($("#radio1").is(':checked')) {
@@ -70,7 +76,7 @@ $(document).ready(function () {
     ano = fecha.getFullYear();
 
   $('#num-dia').html(num_dia);
-  $('#nom-dia').html(nom_dia); 
+  $('#nom-dia').html(nom_dia);
   $('#mes').html(nom_mes);
   $('#ano').html(ano);
 
@@ -86,9 +92,9 @@ $(document).ready(function () {
         num_dia = 30;
       } else {
         if ((ano % 4 === 0) && (ano % 100 == !0) || (ano % 400 === 0)) {
-          num_dia = 28;
-        } else {
           num_dia = 29;
+        } else {
+          num_dia = 28;
         }
       }
     };
@@ -126,12 +132,12 @@ $(document).ready(function () {
         }
       } else {
         if ((ano % 4 === 0) && (ano % 100 == !0) || (ano % 400 === 0)) {
-          if (num_dia > 28) {
+          if (num_dia > 29) {
             num_dia = 1
             num_mes = num_mes + 1;
           }
         } else {
-          if (num_dia > 29) {
+          if (num_dia > 28) {
             num_dia = 1
             num_mes = num_mes + 1;
           }
