@@ -33,9 +33,9 @@ $estado = $_POST['estado'];
 $consulta = "INSERT INTO tbl_pacientes (fecha_registro, genero, tipo_de_documento, documento, nombre, apellidos, telefono, 
 direccion, municipio, departamento, zona, fecha_de_nacimiento, lugar_de_nacimiento, estado_civil, nacionalidad, ocupacion,
 doctor_valoracion, doctor_tratante, correo_electronico, eps_convenio, entero_de_nosotros, edad, nombre_acudiente, estado) 
- VALUES ('$fecha_ingreso','$genero','$t_documento','$documeto','$nombre','$apellidos','$telefono','$direccion','$municipio','$departamento','$zona',
-'$fecha_nacimiento','$l_nacimiento','$estado_civil','$nacionalidad','$ocupacion','$doctor_valora','$doctor_tratante',
-'$correo','$eps','$n_acudiente','$estado')";
+VALUES ('$fecha_ingreso','$genero','$t_documento','$documeto','$nombre','$apellidos','$telefono','$direccion','$municipio',
+'$departamento','$zona','$fecha_nacimiento','$l_nacimiento','$estado_civil','$nacionalidad','$ocupacion','$doctor_valora',
+'$doctor_tratante','$correo','$eps','$nosotros','$edad','$n_acudiente','$estado')";
 
 $resultado = mysqli_query($conexion,$consulta);
 

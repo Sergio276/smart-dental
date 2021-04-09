@@ -960,6 +960,56 @@ form .form-row .textarea {
   margin: 0 10px 0 0;
 }
 
+.tabla-pacientes table {
+  width: 1150px;
+  margin: 50px auto;
+  font-family: tahoma;
+}
+
+.tabla-pacientes table tr td {
+  padding: 12px 10px;
+}
+
+
+.table td{
+padding: 0;
+text-align: center;
+}
+
+thead {
+  background-color:#132330;
+  color: #fff;
+  font-family:tahoma;
+  font-size:15px;
+  text-align: center; 
+  
+}
+
+.boton-ver-ficha {
+  display: inline-block;
+  font-size: 16px;
+  font-family: tahoma;
+  background-color: #0a8642;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration:none;
+}
+
+.boton-ver-ficha:hover {
+  background-color: #212121;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.boton-ver-ficha a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
 /*Fin Estilo Diego*/
 
 /* Inicio Estilo David */
@@ -1068,6 +1118,8 @@ input.barra_busqueda:focus {
 .container_busqueda:hover button.icon:hover {
   background: #f49f1c;
 }
+
+
 
 /* Fin estilo de index Admin */
 

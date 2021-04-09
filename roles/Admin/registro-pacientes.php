@@ -300,7 +300,9 @@
                     <div class="underline"></div>
                     <label for="">Nombre acudiente:</label>
                   </div>
-    
+                </div>
+                 
+                <div class="form-row">
                   <div class="input-data">
                     <input type="text" name="estado" />
                     <div class="underline"></div>
