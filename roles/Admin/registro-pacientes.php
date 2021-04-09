@@ -38,8 +38,11 @@
     
 
     <!--MULTI STEP FORM REGISTRO PACIENTES-->
+
     <div class="container">
+
       <header class="header-title">Registro Pacientes</header>
+
       <div class="progress-bar">
         <div class="step">
           <p>Paso</p>
@@ -72,7 +75,8 @@
       </div>
 
       <div class="form-outer">
-        <form action="#" method="#">
+
+        <form action="../../php/agregar_pacientes.php" method="POST">
 
           <div class="page slide-page">
 
@@ -84,13 +88,13 @@
               <div class="input-fecha">
                <label for=""  > Fecha ingreso:</label> 
               </div>
-                <input type="date" required  />
+                <input type="date" name="fecha_ingreso" required  />
                 <div class="underline"></div>
                 
               </div>
 
               <div class="input-data">
-                <select name="">
+                <select name="genero">
 
                 <option value="">Genero</option>
                 <option value="Masculino">Masculino</option>
@@ -106,7 +110,7 @@
             <div class="form-row">
 
               <div class="input-data">
-                <select name="">
+                <select name="t_documento">
 
                   <option value="">Tipo de documento</option>
                   <option value="cedula">CC</option>
@@ -118,7 +122,7 @@
               </div>
 
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="documento" required />
                 <div class="underline"></div>
                 <label for="">Documento:</label>
               </div>
@@ -128,13 +132,13 @@
             <div class="form-row">
 
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="nombre" required />
                 <div class="underline"></div>
                 <label for="">Nombre:</label>
               </div>
 
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="apellidos" required />
                 <div class="underline"></div>
                 <label for="">Apellidos:</label>
               </div>
@@ -153,12 +157,12 @@
            
             <div class="form-row">
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="telefono" required />
                 <div class="underline"></div>
                 <label for="">telefono:</label>
               </div>
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="direccion" required />
                 <div class="underline"></div>
                 <label for="">Dirección:</label>
               </div>
@@ -166,13 +170,13 @@
 
             <div class="form-row">
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="municipio" required />
                 <div class="underline"></div>
                 <label for="">Municipio:</label>
               </div>
 
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="departamento" required />
                 <div class="underline"></div>
                 <label for="">Departamento:</label>
               </div>
@@ -180,7 +184,7 @@
 
             <div class="form-row">
               <div class="input-data">
-                <select name="">
+                <select name="zona">
 
                   <option value="">Zona</option>
                   <option value="urbana">Urbana</option>
@@ -195,7 +199,7 @@
                 <div class="input-fecha">
                   <label for=""  > Fecha nacimiento:</label> 
                  </div>
-                <input type="date" required />
+                <input type="date" name="fecha_nacimiento" required />
                 <div class="underline"></div>
                 
               </div>
@@ -213,13 +217,13 @@
              
               <div class="form-row">
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="l_nacimiento" required />
                 <div class="underline"></div>
                 <label for="">Lugar de nacimiento:</label>
               </div>
 
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="estado_civil" required />
                 <div class="underline"></div>
                 <label for="">Estado civil:</label>
               </div>
@@ -227,12 +231,12 @@
 
             <div class="form-row">
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="nacionalidad" required />
                 <div class="underline"></div>
                 <label for="">Nacionalidad:</label>
               </div>
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="ocupacion" required />
                 <div class="underline"></div>
                 <label for="">Ocupación:</label>
               </div>
@@ -240,12 +244,12 @@
 
             <div class="form-row">
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="doctor_valora" required />
                 <div class="underline"></div>
                 <label for="">Doctor que valora:</label>
               </div>
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="doctor_tratante" required />
                 <div class="underline"></div>
                 <label for="">Doctor tratante:</label>
               </div>
@@ -264,13 +268,13 @@
              
             <div class="form-row">
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="correo" required />
                 <div class="underline"></div>
                 <label for="">Correo:</label>
               </div>
 
               <div class="input-data">
-                <input type="text" required />
+                <input type="text" name="eps" required />
                 <div class="underline"></div>
                 <label for="">EPS:</label>
               </div>
@@ -278,13 +282,13 @@
               <div class="form-row">
 
                 <div class="input-data">
-                  <input type="text" required />
+                  <input type="text" name="nosotros" required />
                   <div class="underline"></div>
                   <label for="">Como se entero de nosotros?:</label>
                 </div>
 
                 <div class="input-data">
-                  <input type="text" required />
+                  <input type="text" name="edad" required />
                   <div class="underline"></div>
                   <label for="">Edad:</label>
                 </div>
@@ -292,13 +296,13 @@
 
                 <div class="form-row">
                   <div class="input-data">
-                    <input type="text" required />
+                    <input type="text" name="n_acudiente" required />
                     <div class="underline"></div>
                     <label for="">Nombre acudiente:</label>
                   </div>
     
                   <div class="input-data">
-                    <input type="text" required />
+                    <input type="text" name="estado" />
                     <div class="underline"></div>
                     <label for="">Estado:</label>
                   </div>
@@ -308,7 +312,7 @@
 
             <div class="field btns">
               <button class="prev-3 prev">Atras</button>
-              <button class="submit">Registrar Paciente</button>
+              <button class="submit" name="registrar" >Registrar Paciente</button>
             </div>
           </div>
         </form>

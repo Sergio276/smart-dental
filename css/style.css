@@ -7,6 +7,7 @@
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 /*Inicio Estilo Sergio*/
@@ -910,6 +911,7 @@ form .form-row .textarea {
   padding: 10px;
   border-radius: 6px;
   transition: all 0.3s ease;
+  text-decoration:none;
 }
 
 .boton-ver-pacientes {
@@ -922,6 +924,7 @@ form .form-row .textarea {
   padding: 10px;
   border-radius: 6px;
   transition: all 0.3s ease;
+  text-decoration:none;
 }
 
 .boton-añadir-pacientes:hover {
@@ -931,12 +934,23 @@ form .form-row .textarea {
   transform: scale(1.1);
 }
 
+.boton-añadir-pacientes a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
 .boton-ver-pacientes:hover {
   background-color: #212121;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+.boton-ver-pacientes a:hover{
+  color: #fff;
+  text-decoration:none;
+}
+
 
 .contenedor-pacientes button {
   margin: 10px 0 10px 20px;
