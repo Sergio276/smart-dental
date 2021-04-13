@@ -966,13 +966,9 @@ form .form-row .textarea {
   font-family: tahoma;
 }
 
-.tabla-pacientes table tr td {
-  padding: 12px 10px;
-}
-
 
 .table td{
-padding: 0;
+padding-bottom: 0;
 text-align: center;
 }
 

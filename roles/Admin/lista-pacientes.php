@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pacientes | Smart Dental</title>
+  <title>Pacientes registrados | Smart Dental</title>
   <link rel="icon" href="../../img/logo.ico" />
   <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="../../css/style.css" />
@@ -103,16 +103,15 @@
 
   <div class="contenedor-pacientes">
     <div>
-      <h2>Ultimos registros...</h2>
+      <h2>Pacientes registrados</h2>
     </div>
 
     <div class="botones">
-      <button type="button" class="boton-añadir-pacientes">
-        <i class="fas fa-user-plus icon"></i> <a href="registro-pacientes.php">Añadir paciente</a>
-      </button>
+      
       <button type="button" class="boton-ver-pacientes">
-        <i class="fas fa-users icon"></i><a href="lista-pacientes.php">pacientes</a> 
+        <i class="fas fa-house-user"></i> <a href="pacientes.php">Regresar</a> 
       </button>
+
     </div>
 
     <div class="tabla-pacientes">
@@ -140,7 +139,7 @@
 
         require("../../php/conexion.php");
 
-        $consulta = "SELECT * FROM tbl_pacientes ORDER BY idtbl_pacientes DESC LIMIT 10";
+        $consulta = "SELECT * FROM tbl_pacientes ORDER BY idtbl_pacientes DESC";
         $resultado = mysqli_query($conexion, $consulta);
 
         ?>
@@ -177,3 +176,4 @@
 </body>
 
 </html>
+
