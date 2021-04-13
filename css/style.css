@@ -493,19 +493,12 @@ a {
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.contenido-modal #select-patient {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  row-gap: 20px;
-}
-
 #modal-agenda .contenido-modal.active {
   transform: translate(-50%, -50%) scale(1);
 }
 
 .contenido-modal .cabecera-agendar {
-  grid-column-start: 1;
-  grid-column-end: -1;
+  margin: 0 0 20px 0;
 }
 
 .cabecera-agendar h5 {
@@ -523,6 +516,15 @@ a {
 
 .cabecera-agendar i:hover {
   color: rgb(0, 0, 0);
+}
+
+#btn-sigui {
+  margin: 0 0 0 10px;
+}
+
+.contenido-modal #select-patient {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
 }
 
 .radio .checkeo {
@@ -549,12 +551,12 @@ a {
   .contenedor-login form {
     width: 290px;
   }
-  
+
   .contenedor-login h2 {
     font-size: 2.4rem;
     margin: 8px 0;
   }
-  
+
   .banner img {
     width: 400px;
   }
@@ -564,7 +566,7 @@ a {
   .contenedor {
     grid-template-columns: 1fr;
   }
-  
+
   .fecha {
     grid-column-start: 1;
     grid-column-end: -1;
@@ -579,11 +581,11 @@ a {
   .banner {
     display: none;
   }
-  
+
   .wave {
     display: none;
   }
-  
+
   .contenedor-login {
     justify-content: center;
   }
@@ -911,7 +913,7 @@ form .form-row .textarea {
   padding: 10px;
   border-radius: 6px;
   transition: all 0.3s ease;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .boton-ver-pacientes {
@@ -924,7 +926,7 @@ form .form-row .textarea {
   padding: 10px;
   border-radius: 6px;
   transition: all 0.3s ease;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .boton-añadir-pacientes:hover {
@@ -934,7 +936,7 @@ form .form-row .textarea {
   transform: scale(1.1);
 }
 
-.boton-añadir-pacientes a:hover{
+.boton-añadir-pacientes a:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -946,11 +948,10 @@ form .form-row .textarea {
   transform: scale(1.1);
 }
 
-.boton-ver-pacientes a:hover{
+.boton-ver-pacientes a:hover {
   color: #fff;
-  text-decoration:none;
+  text-decoration: none;
 }
-
 
 .contenedor-pacientes button {
   margin: 10px 0 10px 20px;
@@ -970,19 +971,17 @@ form .form-row .textarea {
   padding: 12px 10px;
 }
 
-
-.table td{
-padding: 0;
-text-align: center;
+.table td {
+  padding: 0;
+  text-align: center;
 }
 
 thead {
-  background-color:#132330;
+  background-color: #132330;
   color: #fff;
-  font-family:tahoma;
-  font-size:15px;
-  text-align: center; 
-  
+  font-family: tahoma;
+  font-size: 15px;
+  text-align: center;
 }
 
 .boton-ver-ficha {
@@ -995,7 +994,7 @@ thead {
   padding: 10px;
   border-radius: 6px;
   transition: all 0.3s ease;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .boton-ver-ficha:hover {
@@ -1005,7 +1004,7 @@ thead {
   transform: scale(1.1);
 }
 
-.boton-ver-ficha a:hover{
+.boton-ver-ficha a:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -1118,8 +1117,6 @@ input.barra_busqueda:focus {
 .container_busqueda:hover button.icon:hover {
   background: #f49f1c;
 }
-
-
 
 /* Fin estilo de index Admin */
 
