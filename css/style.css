@@ -445,6 +445,12 @@ a {
   cursor: pointer;
 }
 
+.agendados img {
+  position: relative;
+  height: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .contenedor-agenda .agendados table {
   width: 100%;
 }

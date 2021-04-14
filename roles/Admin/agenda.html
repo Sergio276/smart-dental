@@ -119,42 +119,6 @@
           </div>
         </div>
         <div class="agendados">
-          <table>
-            <tr>
-              <th>Hora</th>
-              <th>Paciente</th>
-              <th>Doctor</th>
-              <th>Estado de la consulta</th>
-              <th>Situación</th>
-            </tr>
-
-            <?php
-
-            require_once '../../php/conexion.php';
-
-            $consulta = "SELECT * FROM tbl_agendados";
-            $resultado = mysqli_query($conexion, $consulta);
-
-            if (mysqli_num_rows($resultado) > 0) {
-              # code...
-              foreach ($resultado as $fila) {
-                # code...
-            ?>
-                <tr>
-                  <td><?php echo $fila['hora'] ?></td>
-                  <td><?php echo $fila['paciente'] ?></td>
-                  <td><?php echo $fila['doctor'] ?></td>
-                  <td><?php echo $fila['estado_consulta'] ?></td>
-                  <td><button class="btn btn-danger"><?php echo $fila['situacion'] ?></button></td>
-                </tr>
-            <?php
-              }
-            } else {
-              # code...
-              echo "No hay ningun registro";
-            }
-            ?>
-          </table>
         </div>
       </div>
     </div>

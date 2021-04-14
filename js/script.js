@@ -166,7 +166,25 @@ $(document).ready(function () {
     $('#ano').html(ano);
   });
 
-  $('[data-toggle="popover"]').popover();
+  $("#busqueda").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("table tr:not(:first-child)").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+
+  function fetch_agendados(){
+    $.ajax({
+      type: "POST",
+      url: "../../php/fetch-agendados.php",
+      success: function (response) {
+        $('.agendados').html(response);
+      }
+    });
+  }
+
+  fetch_agendados();
+
 });
 
 function changeImage(anything) {
