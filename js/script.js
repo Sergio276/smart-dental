@@ -245,3 +245,8 @@ prevBtnFourth.addEventListener("click", function (event) {
   progressText[current - 2].classList.remove("active");
   current -= 1;
 });
+
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})

@@ -9,6 +9,7 @@
   <link rel="icon" href="../../img/logo.ico" />
   <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
 </head>
 
 <body>
@@ -111,7 +112,7 @@
         <i class="fas fa-user-plus icon"></i> <a href="registro-pacientes.php">Añadir paciente</a>
       </button>
       <button type="button" class="boton-ver-pacientes">
-        <i class="fas fa-users icon"></i><a href="lista-pacientes.php">pacientes</a> 
+        <i class="fas fa-users icon"></i><a href="lista-pacientes.php">pacientes</a>
       </button>
     </div>
 
@@ -159,7 +160,34 @@
               <td><?php echo $row['municipio']; ?></td>
               <td><?php echo $row['direccion']; ?></td>
               <td> <button type="button" class="boton-ver-ficha"><i class="fas fa-edit"></i>
-               <a href="#">Ver ficha</a></button></td>
+              
+                  <a href="#">Ver ficha</a></button>
+
+                <button type="button" class="boton-eliminar" data-toggle="modal" data-target="#eliminar-<?php echo $row['idtbl_pacientes']; ?>">
+                  <i class="fas fa-trash-alt"></i> Eliminar</button>
+              </td>
+
+              <!-- The Modal -->
+              <div class="modal fade" id="eliminar-<?php echo $row['idtbl_pacientes']; ?>">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body text-center">
+                      ¿Desea eliminar este paciente?
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <a href="../../php/eliminar-paciente.php?eli-pacientes=<?php echo $row['idtbl_pacientes']; ?>">
+                      <button type="button" class="btn btn-dark">Elimnar</button></a>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
             </tr>
 
           <?php } ?>
@@ -169,11 +197,14 @@
 
   </div>
 
-  <script src="../../js/bootstrap.min.js"></script>
+
+
   <script src="../../js/jquery-3.5.1.min.js"></script>
   <script src="../../js/popper.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
   <script src="../../js/script.js"></script>
   <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+
 </body>
 
 </html>

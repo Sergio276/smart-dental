@@ -1006,6 +1006,27 @@ thead {
   text-decoration: none;
 }
 
+.boton-eliminar {
+  display: inline-block;
+  font-size: 16px;
+  font-family: tahoma;
+  background-color: #b30202;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration:none;
+}
+.boton-eliminar:hover {
+  background-color: #212121;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+
 /*Fin Estilo Diego*/
 
 /* Inicio Estilo David */
