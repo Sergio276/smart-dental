@@ -12,42 +12,143 @@ a {
 
 /*Inicio Estilo Sergio*/
 
-.loader {
+.preloader {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1050;
-  background: #333;
+  z-index: 2050;
+  background: #ecf0f1;
 }
 
-.bar {
-  position: relative;
-  width: 8px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.301);
-  display: inline-block;
-  transform-origin: bottom center;
-  animation: loading 1.5s ease-in-out infinite;
-  animation-delay: calc(0.1s * var(--i));
+.load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+.load hr {
+  border: 0;
+  margin: 0;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  border-radius: 50%;
+  animation: spin 2s ease infinite;
 }
 
-@keyframes loading {
-  0% {
-    transform: scaleY(0.1);
+.load :first-child {
+  background: #19a68c;
+  animation-delay: -1.5s;
+}
+.load :nth-child(2) {
+  background: #f63d3a;
+  animation-delay: -1s;
+}
+.load :nth-child(3) {
+  background: #fda543;
+  animation-delay: -0.5s;
+}
+.load :last-child {
+  background: #193b48;
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(160%);
   }
   50% {
-    transform: scaleY(1);
-    background: #ee9003;
+    transform: translate(160%, 160%);
   }
-  100% {
-    transform: scaleY(0.1);
-    background: transparent;
+  75% {
+    transform: translate(0, 160%);
   }
+}
+
+.loader {
+  position: absolute;
+  width: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.duo {
+  height: 20px;
+  width: 50px;
+  background: hsla(0, 0%, 0%, 0.0);
+  position: absolute;
+  
+}
+
+.duo, .dot {
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.duo1 {
+  left: 0;
+}
+
+.duo2 {
+  left: 30px
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #333;
+  position: absolute;
+}
+
+.dot-a {
+  left: 0px;  
+}
+
+.dot-b {
+  right: 0px;
+}
+
+
+@keyframes spin-2 {
+    0% { transform: rotate(0deg) }
+   50% { transform: rotate(180deg) }
+  100% { transform: rotate(180deg) }
+}
+
+@keyframes onOff {
+    0% { opacity: 0; }
+   49% { opacity: 0; }
+   50% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+.duo1 {
+  animation-name: spin-2;
+}
+
+.duo2 {
+  animation-name: spin-2;
+  animation-direction: reverse;
+}
+
+.duo2 .dot-b {
+  animation-name: onOff;
+}
+
+.duo1 .dot-a {
+  opacity: 0;
+  animation-name: onOff;
+  animation-direction: reverse;
 }
 
 .barra-superior {
@@ -973,10 +1074,9 @@ form .form-row .textarea {
   font-family: tahoma;
 }
 
-
-.table td{
-padding-bottom: 0;
-text-align: center;
+.table td {
+  padding-bottom: 0;
+  text-align: center;
 }
 
 thead {
@@ -1022,7 +1122,7 @@ thead {
   padding: 10px;
   border-radius: 6px;
   transition: all 0.3s ease;
-  text-decoration:none;
+  text-decoration: none;
 }
 .boton-eliminar:hover {
   background-color: #212121;
@@ -1030,8 +1130,6 @@ thead {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-
-
 
 /*Fin Estilo Diego*/
 

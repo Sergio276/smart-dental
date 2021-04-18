@@ -41,7 +41,7 @@ $resultado = mysqli_query($conexion,$consulta);
 
 echo '<script> 
 		alert("Paciente registrado correctamente");
-		window.location.href="../roles/Admin/pacientes.html";
+		window.location.href="../roles/admin/pacientes.php";
 		</script>';
 
 

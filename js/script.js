@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.loader').fadeOut('slow');
+  $('.preloader').fadeOut('slow');
 
   const inputs = document.querySelectorAll(".campo");
 
@@ -166,23 +166,27 @@ $(document).ready(function () {
     $('#ano').html(ano);
   });
 
-  $("#busqueda").on("keyup", function() {
+  $("#busqueda").on("keyup", function () {
     var value = $(this).val().toLowerCase();
-    $("table tr:not(:first-child)").filter(function() {
+    $("table tr:not(:first-child)").filter(function () {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
 
-  function fetch_agendados(){
+  function fetch_agendados() {
     $.ajax({
       type: "POST",
       url: "../../php/fetch-agendados.php",
+      // beforeSend: function () {
+      //   // $('.loader').fadeIn('fast');
+      // },
+
       success: function (response) {
-        $('.agendados').html(response);
+        // $('.loader').fadeOut(10);
+        $('.agendados').append(response);
       }
     });
   }
-
   fetch_agendados();
 
 });
