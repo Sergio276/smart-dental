@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-04-2021 a las 23:22:34
+-- Tiempo de generación: 19-04-2021 a las 01:50:11
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.0
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tbl_agendados` (
   `idtbl_agendados` int(11) NOT NULL,
-  `hora` varchar(6) NOT NULL,
+  `hora` varchar(45) NOT NULL,
   `paciente` varchar(45) NOT NULL,
   `doctor` varchar(45) NOT NULL,
   `estado_consulta` varchar(45) NOT NULL,
@@ -41,8 +41,8 @@ CREATE TABLE `tbl_agendados` (
 --
 
 INSERT INTO `tbl_agendados` (`idtbl_agendados`, `hora`, `paciente`, `doctor`, `estado_consulta`, `situacion`) VALUES
-(1, '8:30', 'Juan', 'Pedro', 'En sala de espera', 'Deuda'),
-(2, '10:00a', 'Lucas', 'Maria', 'Pendiente', 'Deuda');
+(1, '8:30am', 'Juan', 'Pedro', 'En sala de espera', 'Deuda'),
+(2, '10:00am', 'Lucas', 'Maria', 'Pendiente', 'Deuda');
 
 -- --------------------------------------------------------
 
@@ -104,8 +104,7 @@ CREATE TABLE `tbl_pacientes` (
 --
 
 INSERT INTO `tbl_pacientes` (`idtbl_pacientes`, `fecha_registro`, `genero`, `tipo_de_documento`, `documento`, `nombre`, `apellidos`, `telefono`, `direccion`, `municipio`, `departamento`, `zona`, `fecha_de_nacimiento`, `lugar_de_nacimiento`, `estado_civil`, `nacionalidad`, `ocupacion`, `doctor_valoracion`, `doctor_tratante`, `correo_electronico`, `eps_convenio`, `entero_de_nosotros`, `edad`, `nombre_acudiente`, `estado`) VALUES
-(1, '2021-04-14', 'Masculino', 'cedula', 231, 'sadsa', 'dsaa', 231321, '23112', 'dasdas', 'dsaas', 'urbana', '2021-04-14', 'ddasdsa', 'dsadsa', 'sdadsa', 'dsadsa', 'dsasdds', 'dsadas', 'sddas@jhad.sdf', 'asd', 'dsa', 3213, 'dassad', 'dsaasd'),
-(2, '2021-04-09', 'Masculino', 'cedula', 3123, 'afdfasd', 'dsdasdsasssssssssssssssssssssssssssss', 213132132132132321, 'dsdadsadsa', 'sadds', 'saddsadsa', 'urbana', '2021-04-21', 'dsdsadsa', 'j', 'j', 'kj', 'h', 'jk', 'sdasad@js.das', 'dasdsa', 'asdda', 23, 'dsadsa', 'dsadsa');
+(1, '2021-04-14', 'Masculino', 'cedula', 231, 'sadsa', 'dsaa', 231321, '23112', 'dasdas', 'dsaas', 'urbana', '2021-04-14', 'ddasdsa', 'dsadsa', 'sdadsa', 'dsadsa', 'dsasdds', 'dsadas', 'sddas@jhad.sdf', 'asd', 'dsa', 3213, 'dassad', 'dsaasd');
 
 -- --------------------------------------------------------
 
@@ -203,7 +202,7 @@ ALTER TABLE `tbl_cuentas_pendientes`
 -- AUTO_INCREMENT de la tabla `tbl_pacientes`
 --
 ALTER TABLE `tbl_pacientes`
-  MODIFY `idtbl_pacientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idtbl_pacientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_proveedores`

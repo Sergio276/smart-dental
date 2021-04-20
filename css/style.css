@@ -578,6 +578,8 @@ a {
   z-index: 1040;
   transition: 0.3s;
   visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   opacity: 0;
 }
 
@@ -588,9 +590,8 @@ a {
 
 #modal-agenda .contenido-modal {
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
+  margin: 40px auto;
+  transform: scale(0.5);
   background: #fff;
   width: 700px;
   height: auto;
@@ -601,7 +602,7 @@ a {
 }
 
 #modal-agenda .contenido-modal.active {
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
 }
 
 .contenido-modal .cabecera-agendar {
