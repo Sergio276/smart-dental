@@ -175,15 +175,27 @@ $(document).ready(function () {
 
   function fetch_agendados() {
     $.ajax({
-      type: "POST",
       url: "../../php/fetch-agendados.php",
+      type: "POST",
+      dataType: 'JSON',
       // beforeSend: function () {
-      //   // $('.loader').fadeIn('fast');
+      //   $('.loader').fadeIn('fast');
       // },
 
       success: function (response) {
         // $('.loader').fadeOut(10);
-        $('.agendados').append(response);
+        console.log(response);
+        var res_table = '';
+        response.forEach(task => {
+          res_table += `<tr>
+                          <td> ${task.hora} </td>
+                          <td> ${task.paciente} </td>
+                          <td> ${task.doctor} </td>
+                          <td> ${task.estado_consulta} </td>
+                          <td> <button class ="btn btn-danger"> ${task.situacion} </button> </td>
+                        </tr>`;
+        });
+        $('.agendados table').append(res_table);
       }
     });
   }
