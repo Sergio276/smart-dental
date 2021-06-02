@@ -175,8 +175,8 @@ $(document).ready(function () {
 
   function fetch_agendados() {
     $.ajax({
-      url: "../../php/fetch-agendados.php",
-      type: "POST",
+      url: '../../php/fetch-agendados.php',
+      type: 'POST',
       dataType: 'JSON',
       // beforeSend: function () {
       //   $('.loader').fadeIn('fast');
